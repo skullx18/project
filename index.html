@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Signup Form -->
+    <div class="container" id="signup-container">
+        <h1>Sign Up</h1>
+        <form id="signupForm">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <button type="submit">Sign Up</button>
+            <div class="error" id="signupError"></div>
+        </form>
+    </div>
+
+    <!-- Login Form -->
+    <div class="container" id="login-container" style="display:none;">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+            <div class="error" id="loginError"></div>
+        </form>
+    </div>
+
+    <!-- Study Planner Form -->
+    <div class="container" id="study-container" style="display:none;">
+        <h1>Smart Study Planner</h1>
+        <form id="studyForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="examDate">Exam Date:</label>
+            <input type="date" id="examDate" name="examDate" required>
+            <label for="hoursOfStudy">Hours of Study:</label>
+            <input type="number" id="hoursOfStudy" name="hoursOfStudy" min="1" max="24" required>
+            <label for="timeOfDay">Time of Day:</label>
+            <select id="timeOfDay" name="timeOfDay" required>
+                <option value="day">Day</option>
+                <option value="night">Night</option>
+                <option value="evening">Evening</option>
+            </select>
+            <label for="subjects">Subjects (comma-separated):</label>
+            <input type="text" id="subjects" name="subjects" required>
+            <label for="topics">Topics (comma-separated):</label>
+            <input type="text" id="topics" name="topics" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
